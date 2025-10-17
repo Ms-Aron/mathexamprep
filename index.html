@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Year 10 Maths Exam Prep</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #005a9c;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background: #e0e0e0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    nav button {
+      background: #005a9c;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .collapsible {
+      background-color: #f1f1f1;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    .active, .collapsible:hover {
+      background-color: #d0e4f7;
+    }
+    .content {
+      padding: 0 1rem;
+      display: none;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    .quiz-launch {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .quiz-launch button {
+      background: #28a745;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Year 10 Maths Exam Prep</h1>
+  <p>Kincoppal - Rose Bay | Semester 2</p>
+</header>
+
+<nav>
+  <button onclick="scrollToSection('overview')">Overview</button>
+  <button onclick="scrollToSection('topics')">Topics</button>
+  <button onclick="scrollToSection('log')">Learning Log</button>
+  <button onclick="scrollToSection('quiz')">Quiz</button>
+</nav>
+
+<section id="overview">
+  <div class="card">
+    <h2>📘 Exam Overview</h2>
+    <p><strong>Date:</strong> Term 4 Week 4</p>
+    <p><strong>Duration:</strong> 1h 30m + 5m reading</p>
+    <p><strong>Weighting:</strong> 30%</p>
+    <p><strong>Format:</strong> Multiple choice & short answer</p>
+  </div>
+</section>
+
+<section id="topics">
+  <h2>📚 Topics</h2>
+
+  <button class="collapsible">Algebra</button>
+  <div class="content">
+    <ul>
+      <li>Expand, factorise, simplify expressions</li>
+      <li>Linear & quadratic equations</li>
+      <li>Algebraic fractions</li>
+    </ul>
+  </div>
+
+  <button class="collapsible">Probability</button>
+  <div class="content">
+    <ul>
+      <li>Multistage experiments</li>
+      <li>Venn diagrams & two-way tables</li>
+      <li>Tree diagrams</li>
+    </ul>
+  </div>
+
+  <button class="collapsible">Geometry & Trigonometry</button>
+  <div class="content">
+    <ul>
+      <li>Angle relationships</li>
+      <li>Similarity & scale</li>
+      <li>Sine & cosine rules</li>
+    </ul>
+  </div>
+
+  <button class="collapsible">Linear Relationships</button>
+  <div class="content">
+    <ul>
+      <li>Graphing lines</li>
+      <li>Gradient, midpoint, distance</li>
+      <li>Simultaneous equations</li>
+    </ul>
+  </div>
+
+  <button class="collapsible">Surface Area & Volume</button>
+  <div class="content">
+    <ul>
+      <li>Prisms, cylinders, cones, spheres</li>
+      <li>Composite solids</li>
+      <li>Unit conversions</li>
+    </ul>
+  </div>
+</section>
+
+<section id="log">
+  <h2>📝 Learning Log</h2>
+  <div class="card">
+    <p><strong>Due:</strong> 8:25am on 28 May 2025</p>
+    <p>Include 3 pieces of evidence:</p>
+    <ul>
+      <li><strong>1 Summary:</strong> Mind map, summary sheet, palm cards, etc.</li>
+      <li><strong>2 Practice:</strong> Chapter review, past assessments, quizzes, etc.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧪 Practice Quiz</h2>
+  <div class="quiz-launch">
+    <p>Test your knowledge with a quick 5-question quiz!</p>
+    <button onclick="alert('Quiz feature coming soon!')">Start Quiz</button>
+  </div>
+</section>
+
+<script>
+  // Collapsible sections
+  const collapsibles = document.querySelectorAll(".collapsible");
+  collapsibles.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Scroll to section
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
